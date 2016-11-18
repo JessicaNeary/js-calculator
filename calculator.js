@@ -2,7 +2,7 @@ var stream = '';
 
 function calculate(){
   var result = eval(stream);
-  stream = result;
+  stream = '';
   document.getElementById('display').innerHTML = result;
   console.log(result);
 }
@@ -13,13 +13,14 @@ function c(){
 }
 
 function number(a){
-    var last = parseInt(stream.charAt(stream.length-1));
+    var last = parseInt(stream.toString().slice(-1));
     if(stream === ''){
       stream = a;
     }
     else if(isNumber(last)){
+			console.log(stream);
       console.log(last);
-      stream.charAt(stream.length-1) = last*10 + a;
+      stream += ''+a;
     }
     else{
       stream += ' '+a;
