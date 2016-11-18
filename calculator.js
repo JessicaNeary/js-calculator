@@ -1,53 +1,57 @@
 var stream = '';
+var result = 0;
 
 function calculate(){
-  var result = eval(stream);
-  stream = '';
-  document.getElementById('display').innerHTML = result;
-  console.log(result);
+  result = eval(stream);
+  display(result);
+	stream = '';
+}
+
+function decimal(){
+	stream += '.';
+  display(stream);
 }
 
 function c(){
   stream = "";
-  document.getElementById('display').innerHTML = stream;
+  display(stream);
 }
 
 function number(a){
-    stream += ''+a;
-    document.getElementById('display').innerHTML = stream;
+  stream += ''+a;
+  display(stream);
 }
 
 var times = function(){
+	checkStream();
   stream += '*';
-    document.getElementById('display').innerHTML = stream;
+  display(stream);
 }
 
 var divide = function(){
+	checkStream();
   stream += '/';
-    document.getElementById('display').innerHTML = stream;
+  display(stream);
 }
 
 var add = function(){
+	checkStream();
   stream += '+';
-    document.getElementById('display').innerHTML = stream;
+  display(stream);
 }
 
 var subtract = function(){
+	checkStream();
   stream += '-';
-    document.getElementById('display').innerHTML = stream;
+	display(stream);
 }
 
-function isNumber(a){
-  if(a == NaN){
-    return false;
-  }
-  else{return true;}
+function display(x){
+	document.getElementById('display').innerHTML = x;
 }
 
-//When button is pushed
-  //if number
-    //add number to stream
-  //if operation
-    //add function to stream
-  //if enter
-    //run functions
+function checkStream(){
+	if(stream === ''){
+		stream = result;
+	}
+}
