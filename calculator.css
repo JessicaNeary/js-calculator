@@ -1,0 +1,31 @@
+#container{
+	width: 220px;
+	height: 300px;
+	padding-top: 10px;
+	margin: 0 auto;
+	background-color: #b2cfff;
+	border-radius: 10px;
+}
+
+#buttons{
+	display: flex;
+	flex-direction: column;
+	margin-left: 3px;
+	padding-bottom: 3px;
+}
+
+button{
+	font-size: 30px;
+	margin: 5px;
+	width: 40px;
+}
+
+#display{
+	height: 50px;
+	font-size: 40px;
+	padding: 5px;
+	margin: 8px;
+	text-align: right;
+	border: 1px solid black;
+	background-color: white;
+}

@@ -13,39 +13,27 @@ function c(){
 }
 
 function number(a){
-    var last = parseInt(stream.toString().slice(-1));
-    if(stream === ''){
-      stream = a;
-    }
-    else if(isNumber(last)){
-			console.log(stream);
-      console.log(last);
-      stream += ''+a;
-    }
-    else{
-      stream += ' '+a;
-
-    }
+    stream += ''+a;
     document.getElementById('display').innerHTML = stream;
 }
 
 var times = function(){
-  stream += ' *';
+  stream += '*';
     document.getElementById('display').innerHTML = stream;
 }
 
 var divide = function(){
-  stream += ' /';
+  stream += '/';
     document.getElementById('display').innerHTML = stream;
 }
 
 var add = function(){
-  stream += ' +';
+  stream += '+';
     document.getElementById('display').innerHTML = stream;
 }
 
 var subtract = function(){
-  stream += ' -';
+  stream += '-';
     document.getElementById('display').innerHTML = stream;
 }
 
