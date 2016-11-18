@@ -47,7 +47,7 @@ var subtract = function(){
 }
 
 function display(x){
-	document.getElementById('display').innerHTML = x;
+	document.getElementById('display').innerHTML = x.toString().substr(0,10);
 }
 
 function checkStream(){
