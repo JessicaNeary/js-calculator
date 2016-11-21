@@ -15,35 +15,31 @@
     </div>
 
     <div id="buttons">
-
+				<div>
+					<button onclick=x(add('1'))>1</button>
+					<button onclick=x(add('2'))>2</button>
+					<button onclick=x(add('3'))>3</button>
+					<button onclick=x(operat('*'))>*</button>
+				</div>
         <div>
-          <button onclick=number(1)>1</button>
-          <button onclick=number(2)>2</button>
-          <button onclick=number(3)>3</button>
-					<button onclick=times()>*</button>
+					<button onclick=x(add('4'))>4</button>
+					<button onclick=x(add('5'))>5</button>
+					<button onclick=x(add('6'))>6</button>
+					<button onclick=x(operat('/'))>/</button>
         </div>
         <div>
-          <button onclick=number(4)>4</button>
-          <button onclick=number(5)>5</button>
-          <button onclick=number(6)>6</button>
-					<button onclick=divide()>/</button>
+					<button onclick=x(add('7'))>7</button>
+					<button onclick=x(add('8'))>8</button>
+					<button onclick=x(add('9'))>9</button>
+					<button onclick=x(operat('+'))>+</button>
         </div>
-        <div>
-          <button onclick=number(7)>7</button>
-          <button onclick=number(8)>8</button>
-          <button onclick=number(9)>9</button>
-					<button onclick=add()>+</button>
-        </div>
-
-				<div id="bottom row">
-	        <button onclick=number(0)>0</button>
-	        <button id="clear" type='button' onclick=c()>C</button>
-					<button id="decimal" onclick=decimal()>.</button>
-					<button onclick=subtract()>-</button>
+				<div>
+	        <button onclick=x(add('0'))>0</button>
+					<button onclick=x(add('.'))>.</button>
+	        <button onclick=x(c())>C</button>
+					<button onclick=x(operat('-'))>-</button>
 	      </div>
-
 				<button id="enter" type='button' onclick=calculate()>=</button>
-
     </div>
 
   </div>
